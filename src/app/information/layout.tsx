@@ -1,8 +1,8 @@
 import React from 'react';
-import './information-layout.css';
+import cardLayout from './information-layout.module.css';
 
 function CardLayout({ children }: { children: React.ReactNode }) {
-	return <div className="information-layout">{children}</div>;
+	return <div className={cardLayout.informationLayout}>{children}</div>;
 }
 
 export default CardLayout;

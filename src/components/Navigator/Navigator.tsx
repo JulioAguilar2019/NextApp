@@ -7,9 +7,15 @@ interface Props {
 
 function Navigator({ pathNames }: Props) {
 	return (
-		<div style={{ display: 'flex', gap: '10px', flexDirection: 'row' }}>
+		<div>
 			{pathNames.map((pathName) => (
-				<Link href={pathName.path}>{pathName.name} </Link>
+				<Link
+					className="bg-yellow-300 hover:bg-yellow-700"
+					key={pathName.path}
+					href={pathName.path}
+				>
+					{pathName.name}{' '}
+				</Link>
 			))}
 		</div>
 	);
