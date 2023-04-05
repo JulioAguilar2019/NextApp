@@ -18,7 +18,7 @@ function Card({ data }: Props) {
 			<p>Type: {data.type ? data.type : 'No type'}</p>
 			<p>Created: {data.created.toString()}</p>
 			{data.image && (
-				<Image width={100} height={100} alt="Image" src={data.image} />
+				<Image width={100} height={100} alt="Image" src={data.image} priority />
 			)}
 		</div>
 	);
