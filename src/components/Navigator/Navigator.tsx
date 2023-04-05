@@ -9,7 +9,9 @@ function Navigator({ pathNames }: Props) {
 	return (
 		<div style={{ display: 'flex', gap: '10px', flexDirection: 'row' }}>
 			{pathNames.map((pathName) => (
-				<Link href={pathName.path}>{pathName.name} </Link>
+				<Link key={pathName.name} href={pathName.path}>
+					{pathName.name}{' '}
+				</Link>
 			))}
 		</div>
 	);

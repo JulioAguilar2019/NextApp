@@ -1,3 +1,6 @@
+'use client';
+
+import { styled } from 'styled-components';
 import './Card.css';
 import Image from 'next/image';
 
@@ -11,16 +14,21 @@ interface CardData {
 interface Props {
 	data: CardData;
 }
+
+const MyStyle = styled.div`
+	background-color: blue;
+`;
+
 function Card({ data }: Props) {
 	return (
-		<div className="Card">
+		<MyStyle>
 			<p>Name: {data.name}</p>
 			<p>Type: {data.type ? data.type : 'No type'}</p>
 			<p>Created: {data.created.toString()}</p>
 			{data.image && (
 				<Image width={100} height={100} alt="Image" src={data.image} />
 			)}
-		</div>
+		</MyStyle>
 	);
 }
 export default Card;
