@@ -6,6 +6,7 @@ const almendra = Almendra({
 	style: ['italic', 'normal'],
 	subsets: ['latin'],
 	variable: '--font-almendra',
+	display: 'optional',
 });
 
 export default function RootLayout({
@@ -15,9 +16,7 @@ export default function RootLayout({
 }) {
 	return (
 		<html lang="en">
-			<head>
-				<body className={almendra.className}>{children}</body>
-			</head>
+			<body className={almendra.className}>{children}</body>
 		</html>
 	);
 }
